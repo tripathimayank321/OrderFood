@@ -24,7 +24,25 @@
   justify-content: center;
   padding-top: 20px;
 }
+
 .search-button {
-  border: 1px solid green;
   margin-left: 10px;
+}
+.restaurant-card {
+  width: 300px;
+  border-radius: 5px;
+  border: 0.5px solid darkgray;
+}
+.restaurant-card:hover {
+  border: 1.5px solid darkgray;
+  border-radius: 2px;
+}
+.restaurant-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.restaurant-logo {
+  width: inherit;
 }
