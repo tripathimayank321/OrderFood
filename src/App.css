@@ -43,6 +43,17 @@
   flex-wrap: wrap;
 }
 
+.shimmer-restaurant-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.shimmer-restaurant-card {
+  width: 200px;
+  height: 250px;
+  border: 0.5px solid darkgray;
+}
+
 .restaurant-logo {
   width: inherit;
 }

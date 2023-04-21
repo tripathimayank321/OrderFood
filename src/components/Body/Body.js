@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import RestaurantCard from "./RestaurantCard";
+import Shimmer from "../Shimmer";
 
 const Body = () => {
   const [restaurantList, setRestaurantList] = useState([]);
@@ -14,7 +15,6 @@ const Body = () => {
         "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.611665&lng=76.97867800000002&page_type=DESKTOP_WEB_LISTING"
       );
       const jsonData = await res.json();
-      console.log(jsonData);
       setRestaurantList(jsonData?.data?.cards[2]?.data?.data?.cards);
     } catch (error) {
       console.log(error);
@@ -23,7 +23,11 @@ const Body = () => {
   return (
     <div className="body-container">
       <div className="search-container">
-        <input className="search-textbox" type="text" placeholder="Search" />
+        <input
+          className="search-textbox"
+          type="text"
+          placeholder="Search Restaurant"
+        />
         <button type="button" className="search-button">
           Search
         </button>
@@ -35,12 +39,14 @@ const Body = () => {
             return (
               <RestaurantCard
                 resData={restaurant.data}
-                id={restaurant.data.id}
+                key={restaurant.data.id}
               />
             );
           })}
         </div>
-      ) : null}
+      ) : (
+        <Shimmer />
+      )}
     </div>
   );
 };
