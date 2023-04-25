@@ -25,7 +25,8 @@
   "homepage": "https://github.com/tripathimayank321/OrderFood#readme",
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.10.0"
   },
   "devDependencies": {
     "parcel": "^2.8.3",
